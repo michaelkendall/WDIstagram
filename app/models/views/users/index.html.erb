@@ -1,0 +1,8 @@
+<h1>WDIstagram</h1>
+<ul>
+  <% @entries.each do |entry| %>
+  <li><a href="/entries/<%= entry.id %>">Photo by<%= entry.user %></a> at <%= entry.update_at %></li>
+  <% end %>
+</ul>
+
+<a href="/entries/new">Add Entry</a>

@@ -1,0 +1,14 @@
+<h2>User: <%= @entry.user %></h2>
+
+<p><a href="http://www.<%= @entry.photo_url %>">Photo</a></p>
+
+<p>Comment: <%= @entry.comment %></p>
+
+<p>Created at: <%= @entry.created_at %></p>
+<p>Last updated: <%= @entry.updated_at %></p>
+
+<p><a href="/entries/<%= @entry.id %>/edit">Update this entry</a></p>
+
+<div><%= form_tag entry_path(@entry), method: "delete" do %>
+	<%= submit_tag("destroy") %>
+<% end %></div>
